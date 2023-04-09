@@ -1,0 +1,126 @@
+body{
+    font-family: 'Inter', sans-serif;
+    background-color: #0c3953;
+    color: white;
+}
+p{
+    line-height: 130%;
+    font-size: 20px;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+h1{
+    font-size: 52px;
+}
+h2{
+    font-size: 46px;
+}
+h3{
+    font-size: 38px;
+}
+.logo{
+    width: 80px;
+}
+.img-l{
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+}
+.section{
+    margin-bottom: 120px;
+}
+.section.is--home-hero{
+    min-height: 100vh;
+    padding-top: 48px;
+}
+.container{ 
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 32px;
+    padding-right: 32px;  
+    max-width: 1224px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+} 
+.max-width-760px{
+    max-width: 760px;
+}
+.centered{
+    margin-left: auto;
+    margin-right: auto;
+}
+.h1-wrapper{
+    display: flex;
+    direction: horizontal;
+    align-items: center; 
+    justify-content: center;
+    gap: 8px;
+}
+.txt-center-align{
+    text-align: center;
+}
+.recipe-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 80px;
+    grid-row-gap: 80px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Adding overflow hidden separately as to avoid adding the safari fix property to all classes that have of-hidden */
+.overflow-hidden{
+    overflow: hidden;
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+.border-radius-8{
+    border-radius: 8px;
+}
+.recipe-link{
+    width: 100%;
+    aspect-ratio: 1;
+    display: flex;
+    position: relative;
+}
+.god-img{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: all ease 0.5s;
+}
+.recipe-link:hover .god-img {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+.background-overlay{
+    background-color: rgba(0, 0, 0, 0.35);
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+.card-content{
+    width: 100%;
+    height: 100%;
+    padding: 24px 24px 24px 24px;
+    position: relative;
+    z-index: 1;
+    max-width: 40ch;
+    transform: translateY(-80%);
+    opacity: 0;
+    transition: all ease 0.5s;
+}
+.recipe-link:hover .card-content {
+    opacity: 1;
+    transform: translateY(0%);
+}
